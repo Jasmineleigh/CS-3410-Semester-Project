@@ -15,8 +15,8 @@ Make our own version of Dijkstra's algorithm, and compare the time it takes for 
 Make methods based on powerpoints from lecture
 Make method that is the original Dijkstra algorithm
 Make method(s) that are a modified version of the Dijkstra's algorithm
-      * Which is the slowest?
-      * Which is executed better? why?
-      * .........?
+  * Which is the slowest?
+  * Which is executed better? why?
+  * .........?
 
 Choose the method(s) you want to be responsible for, or add a method you think is needed to execute the problems.
