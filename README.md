@@ -11,7 +11,7 @@ Methods needed?
 
 
 Problem 2:
-Make our own version of Dijkstra's algorithm, and compare the time it takes for our version to work to the time of Dijkstra's algorithm.
+Make our own version of Dijkstra's algorithm, and compare the time it takes for our version to Dijkstra's algorithm.
 Make methods based on powerpoints from lecture
 Make method that is the original Dijkstra algorithm
 Make method(s) that are a modified version of the Dijkstra's algorithm
