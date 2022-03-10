@@ -1,5 +1,5 @@
 # CS-3410-Semester-Project
-Problem 1: 
+# Problem 1: 
 What is the distance from point A to point B? 
 What is the fastest route, cheapest route, best route that considers both the cheapest and the fastest route? 
 
@@ -10,11 +10,11 @@ Methods needed?
   * ........?
 
 
-Problem 2:
+# Problem 2:
 Make our own version of Dijkstra's algorithm, and compare the time it takes for our version to Dijkstra's algorithm.
-Make methods based on powerpoints from lecture
-Make method that is the original Dijkstra algorithm
-Make method(s) that are a modified version of the Dijkstra's algorithm
+  * Make methods based on powerpoints from lecture
+  * Make method that is the original Dijkstra algorithm
+  * Make method(s) that are a modified version of the Dijkstra's algorithm
   * Which is the slowest?
   * Which is executed better? why?
   * .........?
