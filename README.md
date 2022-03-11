@@ -11,10 +11,10 @@ Methods needed?
 
 
 # Problem 2:
-Make our own version of Dijkstra's algorithm, and compare the time it takes for our version to Dijkstra's algorithm.
+Make our own version of Minimum Spanning Tree algorithm and compare it to Prim's or Kruskal's algorithm.
   * Make methods based on powerpoints from lecture
-  * Make method that is the original Dijkstra algorithm
-  * Make method(s) that are a modified version of the Dijkstra's algorithm
+  * Make method that is the original Prim's or Kruskal's algorithm
+  * Make method(s) that are a modified version of the Prim's or Kruskal's algorithm
   * Which is the slowest?
   * Which is executed better? why?
   * .........?
