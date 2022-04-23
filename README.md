@@ -1,22 +1,15 @@
 # CS-3410-Semester-Project
 # Problem 1: 
 What is the distance from point A to point B? 
-What is the fastest route, cheapest route, best route that considers both the cheapest and the fastest route? 
-
-Methods needed?
-  * Create a weighted graph of locations or airports (the weights could be price or distance)
-  * findFastestRoute
-  * findCheapestRoute
-  * ........?
+What is the fastest route based on time, distance, or both? 
+* Make a weighted graph where the weights are time and distance.
+* The graph in this problem is the Valdosta State Campus.
+* Outputs the fastest route for all of the possible parameters:
+* time, distance, or distance and time
 
 
 # Problem 2:
 Make our own version of Minimum Spanning Tree algorithm and compare it to Prim's or Kruskal's algorithm.
-  * Make methods based on powerpoints from lecture
-  * Make method that is the original Prim's or Kruskal's algorithm
-  * Make method(s) that are a modified version of the Prim's or Kruskal's algorithm
-  * Which is the slowest?
-  * Which is executed better? why?
-  * .........?
+* Perform the inverse of Kruskal's Algorithm
+* Delete the larger edges first if it doesn't disconnect the graph.
 
-Choose the method(s) you want to be responsible for, or add a method you think is needed to execute the problems.
