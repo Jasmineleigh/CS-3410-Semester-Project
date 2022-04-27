@@ -9,7 +9,6 @@ public class Edge implements Comparable<Edge>{
 		this.start = start;
 		this.end = end;
 		this.weight = weight;
-		isFinalized = false;
 	}
 
 	public Node getStartNode() {
