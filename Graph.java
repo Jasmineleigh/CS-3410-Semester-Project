@@ -142,8 +142,21 @@ public class Graph {
 		List<Edge> mst = InverseKruskal();
 		String str = "";
 		
+		
 		for(int i = 0; i < mst.size(); i++) {
-				str += "\t" + mst.get(i) + "\n";
+			int j = 0;
+			
+			// While loop causes output to be in order based on the index value
+			while(j < mst.size()) {
+				Node start = mst.get(j).getStartNode();
+				// 
+				if(start.getIndex() == i) {
+					str += "\t" + mst.get(j) + "\n";
+					break;
+				}
+					
+				j++;
+			}
 		}
 			
 		return str;
