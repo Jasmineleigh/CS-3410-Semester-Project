@@ -4,21 +4,12 @@ public class Edge implements Comparable<Edge>{
 	private Node start;
 	private Node end;
 	private double weight;
-	private boolean isFinalized;
 	
 	public Edge(Node start, Node end, double weight) {
 		this.start = start;
 		this.end = end;
 		this.weight = weight;
 		isFinalized = false;
-	}
-
-	public boolean isFinalized() {
-		return isFinalized;
-	}
-
-	public void setFinalized(boolean isFinalized) {
-		this.isFinalized = isFinalized;
 	}
 
 	public Node getStartNode() {
