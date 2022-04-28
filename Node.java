@@ -1,70 +1,55 @@
-package prob2;
+package prob1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Comparator;
 
-public class Node {
-	String name;
-	int index;
-	List<Edge> edges = new ArrayList<>();
-	
-	public Node(String name, int index) {
-		this.name = name;
-		this.index = index;
+public class Node implements Comparator<Node> {
+
+	// Member variables of this class
+	private int node;
+	private double cost;
+	private double time;
+	private double rating;
+
+	// Constructors of this class
+
+	// Constructor 1
+	public Node() {}
+
+	// Constructor 2
+	public Node(int node, double cost, double time, double rating){
+
+		// This keyword refers to current instance itself
+		this.node = node;
+		this.cost = cost;
+		this.time = time;
+		this.rating = rating;
 	}
 	
-	public int getIndex() {
-		return index;
+	public int getNode() {
+		return node;
+	}
+
+	public double getCost() {
+		return cost;
 	}
 	
-	public String getName() {
-		return name;
+	public double getTime(){
+		return time;
 	}
 	
-	public List getEdges() {
-		return edges;
+	public double getRating() {
+		return rating;
 	}
-	
-	public boolean addEdge(Edge e) {
-		
-		if(e.getStart().equals(this.name)) {
-			if(!edges.contains(e)) {
-				edges.add(e);
-				return true;
-			}
-		}
-		
-		return false;
+
+	// Method 1
+	@Override public int compare(Node node1, Node node2){
+
+		if (node1.cost < node2.cost)
+			return -1;
+
+		if (node1.cost > node2.cost)
+			return 1;
+
+		return 0;
 	}
-	
-	public int getNumEdges() {
-		return edges.size();
-	}
-	
-	public Edge removeEdge(Edge e) {
-		Edge removed = null;
-		if(!edges.contains(e)) {
-			removed = e;
-			edges.remove(e);
-		}
-		return removed;
-	}
-	
-	public List<Edge> getSortedEdges(){
-		
-		if(edges.size() == 1)
-			return edges;
-		else {
-	
-			for(int i = 1; i < edges.size(); i++) {
-				if(edges.get(i).getWeight() > edges.get(i-1).getWeight()) {
-					Collections.swap(edges, i-1, i);
-				}
-				
-			}
-			return edges;
-		}
-	}
-	
 }

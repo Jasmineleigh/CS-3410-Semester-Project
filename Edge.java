@@ -1,54 +1,43 @@
-package prob2;
+package prob1;
 
-public class Edge implements Comparable<Edge>{
-	private Node start;
-	private Node end;
+public class Edge {
+	private int start;
+	private int end;
 	private double weight;
-	private boolean isFinalized;
+	private int time;
+	private int rating;
 	
-	public Edge(Node start, Node end, double weight) {
+	public Edge(int start, int end, double weight, int time, int rating) {
 		this.start = start;
 		this.end = end;
 		this.weight = weight;
-		isFinalized = false;
+		this.time = time;
+		this.rating = rating;
 	}
 
-	public boolean isFinalized() {
-		return isFinalized;
-	}
-
-	public void setFinalized(boolean isFinalized) {
-		this.isFinalized = isFinalized;
-	}
-
-	public Node getStartNode() {
+	public int getStart() {
 		return start;
 	}
-	
-	public Node getEndNode() {
+
+	public int getEnd() {
 		return end;
 	}
-	
-	public String getStart() {
-		return start.getName();
-	}
 
-	public String getEnd() {
-		return end.getName();
-	}
-	
 	public double getWeight() {
 		return weight;
 	}
 	
-	@Override
-	public int compareTo(Edge e) {
-		return (int)(e.weight - this.weight);
+	public int getTime() {
+		return time;
 	}
 	
+	public int getRating() {
+		return rating;
+	}
+
 	@Override
 	public String toString() {
-		return start.getName() + " to " + end.getName() + " = " + weight;
+		return start + " to " + end + " = " + weight;
 	}
 
 }
