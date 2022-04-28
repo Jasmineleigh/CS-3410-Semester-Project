@@ -2,55 +2,6 @@ package prob1;
 import java.util.*;
 
 public class Main {
-//This implements user input however requires a fulls proper spelling but does ignore case.
-	public static void testInputFromUser() {
-		int numVertices = 29;
-		List<Edge> edges = createEdges();
-		Graph graph = new Graph(edges, numVertices);
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Please input the starting building name");
-		String begin = scan.nextLine();
-		System.out.println("Please input the destination building name");
-		String end = scan.nextLine();
-
-		String[] names = names();
-		
-		int x=0;
-		int y=0;
-		
-		for(int i=0;i<numVertices;i++) {
-			if(begin.equalsIgnoreCase(names[i])) {
-				x=i;
-			}
-			if(end.equalsIgnoreCase(names[i])) {
-				y=i;
-			}
-		}
-		
-		int currentLocation = x;// start
-		int destination = y; // destination
-		
-	// run dijkstra's algo on every node in the graph
-		System.out.println("\nPrioritizing Time...");
-		for(int start = 0; start < numVertices; start++) {
-			findShortestPaths(graph, start, numVertices, currentLocation, destination, "Time");
-		}
-
-		System.out.println("\nPrioritizing Distance...");
-			for(int start = 0; start < numVertices; start++) {
-				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Distance");
-		}
-
-			System.out.println("\nPrioritizing Rating...");
-			for(int start = 0; start < numVertices; start++) {
-				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Rating");
-			}
-
-		scan.close();
-	}
-
-	
-	
 	public static void main(String[]args) {
 		testLongDistance_SHC_To_Odum();
 		testIntermediateDistance_DrexelPark_To_OdumLibrary();
@@ -133,6 +84,52 @@ public class Main {
 		System.out.println("------------------------------------------------------------------------------------------------------------------------");
 	}
 	
+	//This implements user input however requires a fulls proper spelling but does ignore case.
+	public static void testInputFromUser() {
+		int numVertices = 29;
+		List<Edge> edges = createEdges();
+		Graph graph = new Graph(edges, numVertices);
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please input the starting building name");
+		String begin = scan.nextLine();
+		System.out.println("Please input the destination building name");
+		String end = scan.nextLine();
+
+		String[] names = names();
+		
+		int x=0;
+		int y=0;
+		
+		for(int i=0;i<numVertices;i++) {
+			if(begin.equalsIgnoreCase(names[i])) {
+				x=i;
+			}
+			if(end.equalsIgnoreCase(names[i])) {
+				y=i;
+			}
+		}
+		
+		int currentLocation = x;// start
+		int destination = y; // destination
+		
+	// run dijkstra's algo on every node in the graph
+		System.out.println("\nPrioritizing Time...");
+		for(int start = 0; start < numVertices; start++) {
+			findShortestPaths(graph, start, numVertices, currentLocation, destination, "Time");
+		}
+
+		System.out.println("\nPrioritizing Distance...");
+			for(int start = 0; start < numVertices; start++) {
+				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Distance");
+		}
+
+			System.out.println("\nPrioritizing Rating...");
+			for(int start = 0; start < numVertices; start++) {
+				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Rating");
+			}
+
+		scan.close();
+	}
 	
 	public static void findShortestPaths(Graph graph, int source, int n, int start, int destination, String priority) {
 	     PriorityQueue<Node> queue = null;
