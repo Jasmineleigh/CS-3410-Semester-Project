@@ -1,4 +1,4 @@
-package dijkstra_algorithm;
+package prob1;
 import java.util.*;
 
 public class Main {
@@ -7,6 +7,14 @@ public class Main {
 		int numVertices = 29;
 		List<Edge> edges = createEdges();
 		Graph graph = new Graph(edges, numVertices);
+		System.out.println("Building Names:\nFine Arts\nStudent Union\nOdum Library\nLowndes Hall"
+				+ "\nPatterson Hall\nBrown Hall\nNevin's Hall\nConverse Hall"
+				+ "\nHopper Hall\nPalm's Dining\nAshley Hall\nWest Hall\nBailey Science Center"
+				+ "\nReade Hall\nLangdale Hall\nGeorgia Hall\nPowell Hall\nEducation Building"
+				+ "\nOak Parking Deck\nPE Complex\nCommunication Arts\nUniversity Center"
+				+ "\nStudent Rec Center\nSustella Parking Deck\nCentennial Hall\nDrexel Park"
+				+ "\nAdmissions\nHonor's House\nStudent Health Center");
+		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please input the starting building name");
 		String begin = scan.nextLine();
@@ -41,20 +49,15 @@ public class Main {
 				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Distance");
 		}
 
-			System.out.println("\nPrioritizing Rating...");
-			for(int start = 0; start < numVertices; start++) {
-				findShortestPaths(graph, start, numVertices, currentLocation, destination, "Rating");
-			}
-
 		scan.close();
 	}
 
 	
 	
 	public static void main(String[]args) {
-		testLongDistance_SHC_To_Odum();
-		testIntermediateDistance_DrexelPark_To_OdumLibrary();
-		testShortDistance_StudentUnion_To_AshleyHall();
+//		testLongDistance_SHC_To_Odum();
+//		testIntermediateDistance_DrexelPark_To_OdumLibrary();
+//		testShortDistance_StudentUnion_To_AshleyHall();
 		testInputFromUser();
 	}
 	
